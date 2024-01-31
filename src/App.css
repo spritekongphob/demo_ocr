@@ -9,6 +9,12 @@
   height: 100vh;
 }
 
+.box-container{
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+}
+
 .center{
   text-align:'center';
 }
