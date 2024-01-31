@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import IconComponent from './components/IconComponent'
+import { Ocr } from './components/Ocr'
 import './App.css'
 
 function App() {
@@ -8,7 +8,16 @@ function App() {
 
   return (
     <>
-      
+      <div className='body'>
+       <div className="container">
+          <h1 className='text-center mt-5'>IMAGE TO TEXT</h1>
+          <div className="icon mt-4">
+                <IconComponent />
+                <Ocr/>
+          </div>
+
+       </div>
+      </div>
      
     </>
   )
