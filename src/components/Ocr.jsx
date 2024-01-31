@@ -1,5 +1,7 @@
 import React from 'react'
 import '../css/ocr.css'
+import Table from 'react-bootstrap/Table'
+import Card from 'react-bootstrap/Card';
 
 export const Ocr = () => {
   return (
@@ -9,10 +11,86 @@ export const Ocr = () => {
             
         </div>
         </div>
+
         <div className="col-lg-6 d-flex justify-content-center" >
-        <div className="box" >
-            
-        </div>
+           <div className="card boxbar">
+              <Table striped bordered hover>             
+                <thead>
+                  <tr>
+                    <th style={{ textAlign: 'center' }}>PROPERTY</th>
+                    <th style={{ textAlign: 'center' }}>RESULT </th>
+                  </tr>
+                </thead>
+          
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td  style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td  style={{ textAlign: 'center' }}><input type='text' /></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td  style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td  style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td  style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td style={{ textAlign: 'center' }} ><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td  style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td  style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td  style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td  style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td  style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td  style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td  style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td  style={{ textAlign: 'center' }}><input type='text'/></td>
+                  </tr>
+
+                </tbody>
+              </Table>
+          </div>
         </div>
     </div>
   )

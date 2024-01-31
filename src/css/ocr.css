@@ -1,6 +1,17 @@
 .box{
     width: 100%;
-    height: 7c00px;
+    height: 700px;
     border-radius: 15px;
     border: 2px dashed #000;
+}
+
+.boxbar{
+    height: 700px;
+    max-height:700px;
+    overflow: scroll;
+}
+
+.card{
+    width: 100rem;
+    height: 700rem;
 }
