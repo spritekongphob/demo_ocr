@@ -12,8 +12,8 @@ export const FormComp = () => {
           </div>
         </div>       
         <div className="row ps-4">
-        <div className="row px-3 py-2"style={{border:'1px solid red'}}>
-          <div className="col-md-8"style={{border:'1px solid red'}}>
+        <div className="row px-3 py-2">
+          <div className="col-md-8">
             <div className="form-group">
               <div className="col-sm-12">
                 <div className="font">Appeamce</div>

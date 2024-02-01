@@ -1,4 +1,4 @@
-import Image from 'react-bootstrap/Image';
+/*import Image from 'react-bootstrap/Image';
 
 export const Footer = () => {
   return (
@@ -42,3 +42,4 @@ export const Footer = () => {
     </div>
   );
 };
+*/

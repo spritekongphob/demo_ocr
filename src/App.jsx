@@ -1,6 +1,5 @@
 import IconComponent from './components/IconComponent'
 import { Ocr } from './components/Ocr'
-import { Footer } from './components/Footer'
 import './App.css'
 
 function App() {
@@ -13,7 +12,7 @@ function App() {
                 <hr />
                 <Ocr/>
        </div>
-       <Footer/>
+       
     </>
   )
 }
