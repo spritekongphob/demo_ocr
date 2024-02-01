@@ -7,8 +7,8 @@ export const FormComp = () => {
       <form className="form-horizontal">
         <div className="container text-center sticky-top">
           <div className="row align-items-start header-table py-3">
-            <div className="col-md-8 text-light">Property</div>
-            <div className="col-md-4 text-light">Result</div>
+            <div className="col-md-7 text-light">Property</div>
+            <div className="col-md-5 text-light">Result</div>
           </div>
         </div>       
         <div className="row ps-4">
