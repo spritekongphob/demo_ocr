@@ -1,0 +1,8 @@
+.form-control{
+    border: var(--bs-border-width) solid #aba6a6 !important;
+}
+
+.header-table{
+    background: #333;
+    font-weight: 600;
+}
