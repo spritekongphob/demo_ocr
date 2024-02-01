@@ -1,11 +1,11 @@
 import Pdfview from './Pdfview'
 import '../css/ocr.css'
 import Table from 'react-bootstrap/Table'
-import Card from 'react-bootstrap/Card';
+
 
 export const Ocr = () => {
   return (
-    <div className='row mt-5 mb-5 '>
+    <div className='row mt-5 mb-5  pt-4 pb-4'>
         <div className="col-lg-6 d-flex justify-content-center" >
         <div className="box" >
         <Pdfview/>
