@@ -6,3 +6,9 @@
     background: #333;
     font-weight: 600;
 }
+
+.font{
+    font-size: 110%;
+    font-weight:bold;
+    text-transform: capitalize;
+} 
