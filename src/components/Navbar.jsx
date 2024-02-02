@@ -4,11 +4,11 @@ import "../css/Navbar.css";
 
 function TextLinkExample() {
   return (
-    <Navbar className="bg-body-tertiary shadow mb-5 p-4 ">
-      <Container className=' bold '>
-        <Navbar.Brand >DEMO OCR</Navbar.Brand>
+    <div className="bg-body-tertiary shadow mb-5 p-4 ">
+      <Container className=' boldr '>
+        <h1 className='text-center font-title'>DEMO OCR</h1>
       </Container>
-    </Navbar>
+    </div>
   );
 }
 
