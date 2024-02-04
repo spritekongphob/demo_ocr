@@ -1,5 +1,4 @@
 import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
 import "../css/Navbar.css";
 
 function TextLinkExample() {

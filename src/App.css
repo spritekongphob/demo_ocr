@@ -12,3 +12,30 @@
   text-align:'center';
 }
 
+
+
+
+
+
+/* .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px){
+  .container, .container-md, .container-sm {
+    max-width: 1120px !important;
+}
+}
+
+@media (min-width: 576px){
+  .container, .container-sm {
+    max-width: 400px;
+}
+} */
+

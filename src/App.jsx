@@ -9,7 +9,7 @@ function App() {
     <>
         <div>
           <Navbar/>
-          <div className="container  box-container mt-5 py-3 bg-light ">
+          <div className="container box-container mt-5 py-3 bg-light ">
                 <IconComponent />
                 <hr />
                 <Ocr/>
