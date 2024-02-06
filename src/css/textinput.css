@@ -1,0 +1,11 @@
+.input-text input {
+    text-align: center;
+}
+ 
+input{
+    outline: none;
+}
+
+.is-invalid {
+    border-color: red; /* เปลี่ยนสีเป็นแดงเมื่อไม่มีข้อมูล */
+  }

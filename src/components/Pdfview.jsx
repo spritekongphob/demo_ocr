@@ -6,6 +6,7 @@ import axios from "axios";
 import "cropperjs/dist/cropper.css";
 import "react-toastify/dist/ReactToastify.css";
 
+
 const Pdfview = () => {
   const cropperRef = useRef(null);
   const [file, setFile] = useState(null);
