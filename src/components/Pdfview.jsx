@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Pdfview = () => {
   const cropperRef = useRef(null);
+  const [file, setFile] = useState(null);
 
 
   // แจ้งเตือนการ Fetch Api
@@ -56,28 +57,60 @@ const Pdfview = () => {
 
   const onCrop = () => {
     const cropper = cropperRef.current?.cropper;
-    const imageData = cropper.getCroppedCanvas().toDataURL();
-  
+    const croppedCanvas = cropperRef.current.cropper.getCroppedCanvas();
 
-    // ทำการส่งข้อมูลภาพที่ถูก crop ไปยัง URL /upload
-    uploadCroppedImage(imageData);
+    // Convert the cropped canvas to a data URL with the desired format (in this case, image/png)
+    const croppedImageData = croppedCanvas.toDataURL("image/png");
+
+    // Convert the data URL to a Blob
+    const blob = dataURItoBlob(croppedImageData);
+
+    // Convert the Blob to a File with the desired file name and type
+    const croppedFile = new File([blob], "cropped-image.png", { type: "image/png" });
+
+    setFile(croppedFile);
   };
 
-  const uploadCroppedImage = (imageData) => {
-    fetch("http://127.0.0.1:5000/upload", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ image: imageData }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("รับข้อมูลจาก /upload:", data);
+  const handleFileChange = (e) => {
+    // Get the selected file from the input field
+    const selectedFile = e.target.files[0];
+    setFile(selectedFile);
+  };
+
+  const handleFileUpload = (e) => {
+    e.preventDefault();
+
+    if (file) {
+      // If you want to upload the file to the server, you can use FormData and fetch
+      const formData = new FormData();
+      formData.append("file", file);
+
+      fetch("http://localhost:5000/upload", {
+        method: "POST",
+        body: formData,
       })
-      .catch((error) => {
-        console.error("เกิดข้อผิดพลาดในการส่งข้อมูล:", error);
-      });
+        .then(response => response.text())
+        .then(data => {
+          console.log(data);
+        })
+        .catch(error => {
+          console.error("Error uploading image", error);
+        });
+    }
+  };
+
+  const dataURItoBlob = (dataURI) => {
+    const byteString = atob(dataURI.split(",")[1]);
+    const mimeString = dataURI.split(",")[0].split(":")[1].split(";")[0];
+
+    const ab = new ArrayBuffer(byteString.length);
+    const ia = new Uint8Array(ab);
+
+    for (let i = 0; i < byteString.length; i++) {
+      ia[i] = byteString.charCodeAt(i);
+    }
+
+    return new Blob([ab], { type: mimeString });
   };
 
   return (
@@ -111,6 +144,10 @@ const Pdfview = () => {
           <i className="bi bi-zoom-out"></i>
         </Button>
         </div>
+  
+        <form onSubmit={handleFileUpload}>
+        <input type="hidden" name="file" accept="image/*" onChange={handleFileChange} />
+        {/* <input type="submit" value="Upload" onClick={onCrop}/> */}
         <Button
           variant="btn btn-primary"
           className="mt-3  w-100"
@@ -118,9 +155,12 @@ const Pdfview = () => {
             onCrop();
             resolveAfter();
           }}
+          type="submit"
+          value="Upload"
         >
           ประมวลผล
         </Button>
+      </form>
       </div>
      
     </>
