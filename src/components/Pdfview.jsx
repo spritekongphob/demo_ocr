@@ -1,14 +1,27 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Cropper from "react-cropper";
 import Button from "react-bootstrap/Button";
+import axios from 'axios';
 import "cropperjs/dist/cropper.css";
 import "react-toastify/dist/ReactToastify.css";
 
 const Pdfview = () => {
   const cropperRef = useRef(null);
   const [file, setFile] = useState(null);
+  const [imageData, setImageData] = useState('');
 
+  useEffect(() => {
+    // โหลดข้อมูลภาพจาก Backend
+    axios.get('http://localhost:5000/get_image')
+      .then(response => {
+        console.log('Response from Flask:', response.data); // ล็อกค่าที่ได้รับ
+        setImageData(response.data.imageData);
+      })
+      .catch(error => {
+        console.error('Error fetching image:', error);
+      });
+  }, []);
 
   // แจ้งเตือนการ Fetch Api
   const resolveAfter = () => {
@@ -41,7 +54,7 @@ const Pdfview = () => {
   // จบการแจ้งเตือน
 
 
-  //   Zoom
+
 
   const zoomIn = () => {
     cropperRef.current?.cropper.zoom(0.1);
@@ -50,7 +63,6 @@ const Pdfview = () => {
     cropperRef.current?.cropper.zoom(-0.1);
   };
 
-  //End Zoom
 
 
   // Crop
@@ -81,7 +93,7 @@ const Pdfview = () => {
     e.preventDefault();
 
     if (file) {
-      // If you want to upload the file to the server, you can use FormData and fetch
+      // ส่งภาพไปที่ Backend
       const formData = new FormData();
       formData.append("file", file);
 
@@ -116,7 +128,7 @@ const Pdfview = () => {
   return (
     <>
       <Cropper
-        src="../img/BSRC_GB2.jpg"
+        src={`data:image/png;base64,${imageData}`}
         style={{ height: "600px", width: "100%" }}
         initialAspectRatio={16/9}
         guides={false}

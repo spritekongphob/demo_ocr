@@ -2,7 +2,7 @@ import Stack from "react-bootstrap/Stack";
 import Button from "react-bootstrap/Button";
 import Combobox from "./Combobox";
 
-function IconComponent() {
+function Header() {
   return (
     <>
       <div className="row bg-light pt-4 pb-4">
@@ -26,4 +26,4 @@ function IconComponent() {
   );
 }
 
-export default IconComponent;
+export default Header;
