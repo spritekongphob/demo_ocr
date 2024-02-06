@@ -15,7 +15,7 @@ const Pdfview = () => {
     // โหลดข้อมูลภาพจาก Backend
     axios.get('http://localhost:5000/get_image')
       .then(response => {
-        console.log('Response from Flask:', response.data); // ล็อกค่าที่ได้รับ
+        console.log('Response from backend:', response.data); // ล็อกค่าที่ได้รับ
         setImageData(response.data.imageData);
       })
       .catch(error => {
@@ -78,7 +78,7 @@ const Pdfview = () => {
     const blob = dataURItoBlob(croppedImageData);
 
     // Convert the Blob to a File with the desired file name and type
-    const croppedFile = new File([blob], "cropped-image.png", { type: "image/png" });
+    const croppedFile = new File([blob], "crop-image.png", { type: "image/png" });
 
     setFile(croppedFile);
   };
@@ -128,14 +128,15 @@ const Pdfview = () => {
   return (
     <>
       <Cropper
-        src={`data:image/png;base64,${imageData}`}
+        // src={`data:image/png;base64,${imageData}`}
+        src='../img/BSRC_GB1.jpg'
         style={{ height: "600px", width: "100%" }}
         initialAspectRatio={16/9}
         guides={false}
         ref={cropperRef}
       />
       <ToastContainer position="top-left" />
-      <div className="d-flex">
+      <div className="d-flex justify-content-center">
         <div className="d-flex">
         <Button
           variant="btn btn-primary"
