@@ -1,4 +1,4 @@
-import IconComponent from './components/IconComponent'
+import Header from './components/Header'
 import { Ocr } from './components/Ocr'
 import './App.css'
 import Navbar from './components/Navbar'
@@ -10,7 +10,7 @@ function App() {
         <div>
           <Navbar/>
           <div className="container box-container mt-5 py-3 bg-light ">
-                <IconComponent />
+                <Header/>
                 <hr />
                 <Ocr/>
           </div>
