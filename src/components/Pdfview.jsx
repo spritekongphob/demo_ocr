@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 import "cropperjs/dist/cropper.css";
 import "react-toastify/dist/ReactToastify.css";
 
+
 const Pdfview = () => {
     const cropperRef = useRef(null);
     // const [croppedImageData, setCroppedImageData] = useState(null);
