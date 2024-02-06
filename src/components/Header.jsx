@@ -57,7 +57,7 @@ function Header() {
         <div className="d-flex">
           <div className="col-md-4 ">
             <Form.Select aria-label="Default" style={{ width: "250px" }}>
-              <option>Select Componies </option>
+              <option>Componies </option>
               <option value="1">BSRC</option>
               <option value="2">KPAT</option>
               <option value="3">NFCT</option>
@@ -69,7 +69,7 @@ function Header() {
           </div>
           <div className="col-md-4 text-center">
             <Form.Select aria-label="Default" style={{ width: "250px" }}>
-              <option>Select Product </option>
+              <option>Product </option>
               <option value="1">JET A-1</option>
               <option value="2">H-Base</option>
               <option value="3">GB1</option>

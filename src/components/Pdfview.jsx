@@ -1,25 +1,26 @@
-import React, { useRef, useState,useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Cropper from "react-cropper";
 import Button from "react-bootstrap/Button";
-import axios from 'axios';
+import axios from "axios";
 import "cropperjs/dist/cropper.css";
 import "react-toastify/dist/ReactToastify.css";
 
 const Pdfview = () => {
   const cropperRef = useRef(null);
   const [file, setFile] = useState(null);
-  const [imageData, setImageData] = useState('');
+  const [imageData, setImageData] = useState("");
 
   useEffect(() => {
     // โหลดข้อมูลภาพจาก Backend
-    axios.get('http://localhost:5000/get_image')
-      .then(response => {
-        console.log('Response from backend:', response.data); // ล็อกค่าที่ได้รับ
+    axios
+      .get("http://localhost:5000/get_image")
+      .then((response) => {
+        console.log("Response from backend:", response.data); // ล็อกค่าที่ได้รับ
         setImageData(response.data.imageData);
       })
-      .catch(error => {
-        console.error('Error fetching image:', error);
+      .catch((error) => {
+        console.error("Error fetching image:", error);
       });
   }, []);
 
@@ -53,9 +54,6 @@ const Pdfview = () => {
   };
   // จบการแจ้งเตือน
 
-
-
-
   const zoomIn = () => {
     cropperRef.current?.cropper.zoom(0.1);
   };
@@ -63,12 +61,10 @@ const Pdfview = () => {
     cropperRef.current?.cropper.zoom(-0.1);
   };
 
-
-
   // Crop
 
   const onCrop = () => {
-    const cropper = cropperRef.current?.cropper;
+
     const croppedCanvas = cropperRef.current.cropper.getCroppedCanvas();
 
     // Convert the cropped canvas to a data URL with the desired format (in this case, image/png)
@@ -78,7 +74,9 @@ const Pdfview = () => {
     const blob = dataURItoBlob(croppedImageData);
 
     // Convert the Blob to a File with the desired file name and type
-    const croppedFile = new File([blob], "crop-image.png", { type: "image/png" });
+    const croppedFile = new File([blob], "crop-image.png", {
+      type: "image/png",
+    });
 
     setFile(croppedFile);
   };
@@ -101,16 +99,17 @@ const Pdfview = () => {
         method: "POST",
         body: formData,
       })
-        .then(response => response.text())
-        .then(data => {
+        .then((response) => response.text())
+        .then((data) => {
           console.log(data);
         })
-        .catch(error => {
+        .catch((error) => {
           console.error("Error uploading image", error);
         });
     }
   };
 
+  // แปลง Url เป็น ภาพ
   const dataURItoBlob = (dataURI) => {
     const byteString = atob(dataURI.split(",")[1]);
     const mimeString = dataURI.split(",")[0].split(":")[1].split(";")[0];
@@ -129,53 +128,57 @@ const Pdfview = () => {
     <>
       <Cropper
         // src={`data:image/png;base64,${imageData}`}
-        src='../img/BSRC_GB1.jpg'
+        src="../img/BSRC_GB1.jpg"
         style={{ height: "600px", width: "100%" }}
-        initialAspectRatio={16/9}
+        initialAspectRatio={16 / 9}
         guides={false}
         ref={cropperRef}
       />
       <ToastContainer position="top-left" />
       <div className="d-flex justify-content-center">
         <div className="d-flex">
-        <Button
-          variant="btn btn-primary"
-          className="mt-3 me-2 w-100"
-          onClick={() => {
-            zoomIn();
-          }}
-        >
-          <i className="bi bi-zoom-in"></i>
-        </Button>
-        <Button
-          variant="btn btn-primary"
-          className="mt-3 me-2 w-100"
-          onClick={() => {
-            zoomOut();
-          }}
-        >
-          <i className="bi bi-zoom-out"></i>
-        </Button>
+          <Button
+            variant="btn btn-primary"
+            className="mt-3 me-2 w-100"
+            onClick={() => {
+              zoomIn();
+            }}
+          >
+            <i className="bi bi-zoom-in"></i>
+          </Button>
+          <Button
+            variant="btn btn-primary"
+            className="mt-3 me-2 w-100"
+            onClick={() => {
+              zoomOut();
+            }}
+          >
+            <i className="bi bi-zoom-out"></i>
+          </Button>
         </div>
-  
+
         <form onSubmit={handleFileUpload}>
-        <input type="hidden" name="file" accept="image/*" onChange={handleFileChange} />
-        {/* <input type="submit" value="Upload" onClick={onCrop}/> */}
-        <Button
-          variant="btn btn-primary"
-          className="mt-3  w-100"
-          onClick={() => {
-            onCrop();
-            resolveAfter();
-          }}
-          type="submit"
-          value="Upload"
-        >
-          ประมวลผล
-        </Button>
-      </form>
+          <input
+            type="hidden"
+            name="file"
+            accept="image/*"
+            onChange={handleFileChange}
+          />
+          {/* <input type="submit" value="Upload" onClick={onCrop}/> */}
+          <Button
+            variant="btn btn-primary"
+            className="mt-3  w-100"
+            onClick={() => {
+              onCrop();
+              resolveAfter();
+            }}
+            type="submit"
+            value="Upload"
+          >
+            ประมวลผล
+          </Button>
+        </form>
       </div>
-     
     </>
   );
 };
