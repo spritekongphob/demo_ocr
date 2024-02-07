@@ -2,10 +2,10 @@
     text-align: center;
 }
  
-input{
-    outline: none;
-}
 
+/* เปลี่ยนสีเป็นแดงเมื่อไม่มีข้อมูล */
 .is-invalid {
-    border-color: red; /* เปลี่ยนสีเป็นแดงเมื่อไม่มีข้อมูล */
+    border-color: red; 
   }
+
+  
