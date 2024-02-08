@@ -3,7 +3,7 @@ import "../css/textinput.css"
 import React, { useEffect } from 'react';
 
 export const FormComp = () => {
-      //ฟั่งชั่นคำสั่งตรวจสอบ input เมื่อไม่มีข้อความจะขึ้นข้อความเป็นกรอบสีแดง
+      //ฟั่งชั่นคำสั่งตรวจสอบ input เมื่อไม่มีข้อมูลจะขึ้นแจ้งเตือนเป็นกรอบสีแดง
       useEffect(() => {
           const inputElements = document.querySelectorAll('.form-control');
   
@@ -47,7 +47,7 @@ export const FormComp = () => {
                   <div className="font"> Appeamce</div>
             </div>
             <div className="col-md-4 input-text  ">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -56,7 +56,7 @@ export const FormComp = () => {
                   <div className="font"> Fash point</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>                                                                 
+                  <input className="form-control is-invalid" required></input>                                                                 
             </div>
           </div>
 
@@ -65,7 +65,7 @@ export const FormComp = () => {
                   <div className="font"> Feezing point</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>                                                     
+                  <input className="form-control is-invalid" required></input>                                                     
             </div>
           </div>
 
@@ -74,7 +74,7 @@ export const FormComp = () => {
                   <div className="font">Sulphur</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -83,7 +83,7 @@ export const FormComp = () => {
                   <div className="font">Density @15˚C </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -92,7 +92,7 @@ export const FormComp = () => {
                   <div className="font">Visual Color</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -101,7 +101,7 @@ export const FormComp = () => {
                   <div className="font">Corrosion</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>     
+                  <input className="form-control is-invalid" required></input>     
             </div>
           </div>
 
@@ -110,7 +110,7 @@ export const FormComp = () => {
                   <div className="font">Dis 10% </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>                                                                                                                 
+                  <input className="form-control is-invalid" required></input>                                                                                                                 
             </div>
           </div>
 
@@ -119,7 +119,7 @@ export const FormComp = () => {
                   <div className="font">A Dis 50%</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>                                                                                                                                                           
+                  <input className="form-control is-invalid" required></input>                                                                                                                                                           
             </div>
           </div>
 
@@ -128,7 +128,7 @@ export const FormComp = () => {
                   <div className="font">Dis 90% </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -137,7 +137,7 @@ export const FormComp = () => {
                   <div className="font">End point</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -146,7 +146,7 @@ export const FormComp = () => {
                   <div className="font">Residue </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -155,7 +155,7 @@ export const FormComp = () => {
                   <div className="font"> Existent Gum </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>     
+                  <input className="form-control is-invalid" required></input>     
             </div>
           </div>
 
@@ -164,7 +164,7 @@ export const FormComp = () => {
                   <div className="font">Filter</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>                                                     
+                  <input className="form-control is-invalid" required></input>                                                     
             </div>
           </div>
 
@@ -173,7 +173,7 @@ export const FormComp = () => {
                   <div className="font">Viscosity </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -182,7 +182,7 @@ export const FormComp = () => {
                   <div className="font">Specific Energy</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -191,7 +191,7 @@ export const FormComp = () => {
                   <div className="font">EC Conduct</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -200,7 +200,7 @@ export const FormComp = () => {
                   <div className="font"> Thermal</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -209,7 +209,7 @@ export const FormComp = () => {
                   <div className="font">Thermal Stability ( Control Temp )</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -218,7 +218,7 @@ export const FormComp = () => {
                   <div className="font">MSEP ( Fuel With static )</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -227,7 +227,7 @@ export const FormComp = () => {
                   <div className="font">Aromatic</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -236,7 +236,7 @@ export const FormComp = () => {
                   <div className="font">Bocle</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -245,7 +245,7 @@ export const FormComp = () => {
                   <div className="font">Antioxidance </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -254,7 +254,7 @@ export const FormComp = () => {
                   <div className="font">Metal First Dopping</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -263,7 +263,7 @@ export const FormComp = () => {
                   <div className="font">Metal Commulative</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -272,7 +272,7 @@ export const FormComp = () => {
                   <div className="font">Static Commulative</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -281,7 +281,7 @@ export const FormComp = () => {
                   <div className="font">( Disillation ) loss % V/V</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -290,7 +290,7 @@ export const FormComp = () => {
                   <div className="font">Stadis-450</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -299,7 +299,7 @@ export const FormComp = () => {
                   <div className="font">Total Acid</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -308,7 +308,7 @@ export const FormComp = () => {
                   <div className="font">Particulate Contamination</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -317,7 +317,7 @@ export const FormComp = () => {
                   <div className="font"> Particula code{">"}=4um</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -326,7 +326,7 @@ export const FormComp = () => {
                   <div className="font">Particula code{">"}=6um </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -335,7 +335,7 @@ export const FormComp = () => {
                   <div className="font">Particula code{">"}=14um</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -344,7 +344,7 @@ export const FormComp = () => {
                   <div className="font">Particula code{">"}=21um</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -353,7 +353,7 @@ export const FormComp = () => {
                   <div className="font">Particula code{">"}=25um</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -362,7 +362,7 @@ export const FormComp = () => {
                   <div className="font"> Particula code{">"}=30um</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -371,7 +371,7 @@ export const FormComp = () => {
                   <div className="font">Fame</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -380,7 +380,7 @@ export const FormComp = () => {
                   <div className="font">issue 33</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
 
@@ -389,7 +389,7 @@ export const FormComp = () => {
                   <div className="font">Remark</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" id="validationTextarea"required></input>
+                  <input className="form-control is-invalid" required></input>
             </div>
           </div>
         </div>
