@@ -127,7 +127,7 @@ const Pdfview = () => {
             : ""
         }
         style={{ height: "600px", width: "100%" }}
-        initialAspectRatio={1/1}
+        initialAspectRatio={16/9}
         guides={false}
         ref={cropperRef}
       />
