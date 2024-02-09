@@ -3,6 +3,10 @@ import Form from "react-bootstrap/Form";
 
 function FileUpload() {
   const [file, setFile] = useState(null);
+  const [Imglist, setImglist] = useState(null);
+
+
+  console.log(Imglist,'ค่า Imglist');
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
@@ -19,13 +23,16 @@ function FileUpload() {
     const formData = new FormData();
     formData.append("file", file);
 
-    fetch("http://localhost:5000/upload", {
+    // ส่งขอ้มูลไป backend
+    fetch("http://localhost:18000/upload", {
       method: "POST",
       body: formData,
     })
-      .then((response) => response.text())
+      .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        console.log(data,'สำเร็จ');
+        console.log(data.img_list)
+        setImglist(data.img_list);
       })
       .catch((error) => {
         console.error("Error uploading image", error);
@@ -42,7 +49,7 @@ function FileUpload() {
         type="file"
         name="file"
         className="form-control"
-        accept="image/*"
+        accept="*"
         onChange={handleFileChange}
       />
       <input className="btn btn-primary px-2" type="submit" value="Save" />
@@ -57,7 +64,7 @@ function Header() {
         <div className="d-flex">
           <div className="col-md-4 ">
             <Form.Select aria-label="Default" style={{ width: "250px" }}>
-              <option>Componies </option>
+              <option>Company </option>
               <option value="1">BSRC</option>
               <option value="2">KPAT</option>
               <option value="3">NFCT</option>
@@ -79,6 +86,7 @@ function Header() {
           </div>
           <div className="col-md-4">
             <FileUpload />
+            <img src='' alt="" />
           </div>
         </div>
       </div>

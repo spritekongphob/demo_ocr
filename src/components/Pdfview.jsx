@@ -37,7 +37,7 @@ const Pdfview = () => {
   const onCrop = () => {
     const croppedCanvas = cropperRef.current.cropper.getCroppedCanvas();
 
-    // Convert the cropped canvas to a data URL with the desired format (in this case, image/png)
+    // Convert  cropped to image/png
     const croppedImageData = croppedCanvas.toDataURL("image/png");
 
     // Convert the data URL to a Blob

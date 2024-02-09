@@ -44,19 +44,19 @@ export const FormComp = () => {
         <div className="row ps-4 ">
           <div className="row px-3 py-2">
             <div className="col-md-8 ">
-                  <div className="font"> Appeamce</div>
+                  <div className="font">Appeamce</div>
             </div>
             <div className="col-md-4 input-text  ">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='appearance' required></input>
             </div>
           </div>
 
           <div className="row px-3 py-2">
             <div className="col-md-8 ">
-                  <div className="font"> Fash point</div>
+                  <div className="font"> Flash point</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>                                                                 
+                  <input className="form-control is-invalid" id='flash_point' required></input>                                                                 
             </div>
           </div>
 
@@ -65,7 +65,7 @@ export const FormComp = () => {
                   <div className="font"> Feezing point</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>                                                     
+                  <input className="form-control is-invalid" id='freezeing_point' required></input>                                                     
             </div>
           </div>
 
@@ -74,7 +74,7 @@ export const FormComp = () => {
                   <div className="font">Sulphur</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='sulphur' required></input>
             </div>
           </div>
 
@@ -83,7 +83,7 @@ export const FormComp = () => {
                   <div className="font">Density @15˚C </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='density_at_15' required></input>
             </div>
           </div>
 
@@ -92,7 +92,7 @@ export const FormComp = () => {
                   <div className="font">Visual Color</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='color' required></input>
             </div>
           </div>
 
@@ -101,7 +101,7 @@ export const FormComp = () => {
                   <div className="font">Corrosion</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>     
+                  <input className="form-control is-invalid" id='corrosion' required></input>     
             </div>
           </div>
 
@@ -110,7 +110,7 @@ export const FormComp = () => {
                   <div className="font">Dis 10% </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>                                                                                                                 
+                  <input className="form-control is-invalid" id='dis_10' required></input>                                                                                                                 
             </div>
           </div>
 
@@ -119,7 +119,7 @@ export const FormComp = () => {
                   <div className="font">A Dis 50%</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>                                                                                                                                                           
+                  <input className="form-control is-invalid" id='dis_50' required></input>                                                                                                                                                           
             </div>
           </div>
 
@@ -128,7 +128,7 @@ export const FormComp = () => {
                   <div className="font">Dis 90% </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='dis_90' required></input>
             </div>
           </div>
 
@@ -137,7 +137,7 @@ export const FormComp = () => {
                   <div className="font">End point</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='end_point' required></input>
             </div>
           </div>
 
@@ -146,7 +146,7 @@ export const FormComp = () => {
                   <div className="font">Residue </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='residue' required></input>
             </div>
           </div>
 
@@ -155,7 +155,7 @@ export const FormComp = () => {
                   <div className="font"> Existent Gum </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>     
+                  <input className="form-control is-invalid" id='existent_gum' required></input>     
             </div>
           </div>
 
@@ -164,7 +164,7 @@ export const FormComp = () => {
                   <div className="font">Filter</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>                                                     
+                  <input className="form-control is-invalid" id='filter' required></input>                                                     
             </div>
           </div>
 
@@ -173,7 +173,16 @@ export const FormComp = () => {
                   <div className="font">Viscosity </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='viscosity' required></input>
+            </div>
+          </div>
+
+          <div className="row px-3 py-2">
+            <div className="col-md-8 ">
+                  <div className="font">Smoke Point</div>
+            </div>
+            <div className="col-md-4 input-text">
+                  <input className="form-control is-invalid" id='smoke_point' required></input>
             </div>
           </div>
 
@@ -182,7 +191,7 @@ export const FormComp = () => {
                   <div className="font">Specific Energy</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='specific_energy' required></input>
             </div>
           </div>
 
@@ -191,7 +200,7 @@ export const FormComp = () => {
                   <div className="font">EC Conduct</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='ec_conduct' required></input>
             </div>
           </div>
 
@@ -200,25 +209,17 @@ export const FormComp = () => {
                   <div className="font"> Thermal</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='thermal_stab' required></input>
             </div>
           </div>
 
-          <div className="row px-3 py-2">
-            <div className="col-md-8 ">
-                  <div className="font">Thermal Stability ( Control Temp )</div>
-            </div>
-            <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
-            </div>
-          </div>
 
           <div className="row px-3 py-2">
             <div className="col-md-8 ">
-                  <div className="font">MSEP ( Fuel With static )</div>
+                  <div className="font">MSEP</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='msep' required></input>
             </div>
           </div>
 
@@ -227,7 +228,7 @@ export const FormComp = () => {
                   <div className="font">Aromatic</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='aromatic' required></input>
             </div>
           </div>
 
@@ -236,7 +237,7 @@ export const FormComp = () => {
                   <div className="font">Bocle</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='bocle' required></input>
             </div>
           </div>
 
@@ -245,7 +246,7 @@ export const FormComp = () => {
                   <div className="font">Antioxidance </div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='antioxidance' required></input>
             </div>
           </div>
 
@@ -254,7 +255,7 @@ export const FormComp = () => {
                   <div className="font">Metal First Dopping</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='metal_first' required></input>
             </div>
           </div>
 
@@ -263,7 +264,7 @@ export const FormComp = () => {
                   <div className="font">Metal Commulative</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='metal_commu' required></input>
             </div>
           </div>
 
@@ -272,7 +273,7 @@ export const FormComp = () => {
                   <div className="font">Static Commulative</div>
             </div>
             <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
+                  <input className="form-control is-invalid" id='static_commu' required></input>
             </div>
           </div>
 
@@ -366,32 +367,6 @@ export const FormComp = () => {
             </div>
           </div>
 
-          <div className="row px-3 py-2">
-            <div className="col-md-8 ">
-                  <div className="font">Fame</div>
-            </div>
-            <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
-            </div>
-          </div>
-
-          <div className="row px-3 py-2">
-            <div className="col-md-8 ">
-                  <div className="font">issue 33</div>
-            </div>
-            <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
-            </div>
-          </div>
-
-          <div className="row px-3 py-2">
-            <div className="col-md-8 ">
-                  <div className="font">Remark</div>
-            </div>
-            <div className="col-md-4 input-text">
-                  <input className="form-control is-invalid" required></input>
-            </div>
-          </div>
         </div>
      </form>
      
