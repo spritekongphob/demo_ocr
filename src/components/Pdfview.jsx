@@ -147,7 +147,7 @@ const Pdfview = () => {
             }}
           >
             {/* previous icon*/}
-            <i class="bi bi-arrow-left-short"></i>
+            <i className="bi bi-arrow-left-short"></i>
           </Button>
           <Button
             className="mt-3 me-2 w-100"
@@ -159,7 +159,7 @@ const Pdfview = () => {
             }}
           >
             {/* next icon*/}
-            <i class="bi bi-arrow-right-short"></i>
+            <i className="bi bi-arrow-right-short"></i>
           </Button>
 
           <Button
