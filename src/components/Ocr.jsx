@@ -4,14 +4,14 @@ import '../css/ocr.css'
 
 export const Ocr = () => {
   return (
-    <div className='row mt-5 pt-4 pb-4'>
+    <div className='row  pt-4 pb-4'>
       <div className="col-lg-6 d-flex justify-content-center">
-        <div className="box ">
+        <div className="box">
           <Pdfview />      
         </div>
       </div>
       <div className="col-lg-6 d-flex justify-content-center">
-        <div className="card boxbar">
+        <div className="boxbar">
           <FormComp />
         </div>
       </div>
